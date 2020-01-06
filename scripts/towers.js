@@ -609,7 +609,7 @@ tower.tesla = {
 
 tower.archer = {
     // Display
-    color: [0, 255, 0],
+    color: [165, 42, 42],
     length: 0.55,
     radius: 0.8,
     secondary: [149, 165, 166],
@@ -618,9 +618,10 @@ tower.archer = {
     name: 'archer',
     title: 'Archer',
     // Stats
-    cooldownMax: 100,
+    cooldownMax: 125,
     cost: 10,
-    damageMax: 2,
+    damageMin: 4,
+    damageMax: 8,
     range: 5,
     type: 'dart',
     // Upgrades
@@ -637,10 +638,10 @@ tower.archer = {
             name: 'fasterAiming',
             title: 'Faster Aiming',
             // Stats
-            cooldownMax: 50,
+            cooldownMax: 75,
             cost: 20,
-            damageMax: 8,
-            damageMin: 5,
+            damageMax: 18,
+            damageMin: 12,
             range: 8,
             // Methods
             attack: function(e) {
