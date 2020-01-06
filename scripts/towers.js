@@ -606,3 +606,35 @@ tower.tesla = {
         }
     ]
 };
+
+tower.archer = {
+    // Display
+    color: [0, 255, 0],
+    length: 0.65,
+    radius: 0.9,
+    secondary: [149, 165, 166],
+    // Misc
+    name: 'archer',
+    title: 'Archer Tower',
+    // Stats
+    cooldownMax: 250,
+    cooldownMin: 249,
+    cost: 10,
+    range: 8,
+    // Upgrades
+    upgrades: [
+        {
+            // Display
+            color: [249, 105, 14],
+            // Misc
+            name: 'archerFast',
+            title: 'Fast Aiming',
+            // Stats
+            cooldownMax: 5,
+            cooldownMin: 0,
+            cost: 75,
+            damageMax: 10,
+            damageMin: 8,
+        }
+    ]
+};
