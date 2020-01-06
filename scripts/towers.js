@@ -610,32 +610,52 @@ tower.tesla = {
 tower.archer = {
     // Display
     color: [0, 255, 0],
-    length: 0.65,
-    radius: 0.9,
+    length: 0.55,
+    radius: 0.8,
     secondary: [149, 165, 166],
+    width: 0.25,
     // Misc
     name: 'archer',
-    title: 'Archer Tower',
+    title: 'Archer',
     // Stats
     cooldownMax: 100,
-    cooldownMin: 99,
-    damageMax: 3,
     cost: 10,
-    range: 8,
+    damageMax: 2,
+    range: 5,
+    type: 'dart',
     // Upgrades
     upgrades: [
         {
             // Display
-            color: [249, 105, 14],
+            color: [78, 205, 196],
+            length: 0.65,
+            radius: 0.9,
+            secondary: [191, 191, 191],
+            weight: 3,
+            width: 0.35,
             // Misc
-            name: 'archerFast',
-            title: 'Fast Aiming',
+            name: 'fasterAiming',
+            title: 'Faster Aiming',
             // Stats
-            cooldownMax: 45,
-            cooldownMin: 44,
-            cost: 25,
-            damageMax: 10,
-            damageMin: 8,
+            cooldownMax: 50,
+            cost: 20,
+            damageMax: 8,
+            damageMin: 5,
+            range: 8,
+            // Methods
+            attack: function(e) {
+                if (this.lastTarget === e) {
+                    this.duration++;
+                } else {
+                    this.lastTarget = e;
+                    this.duration = 0;
+                }
+                //var damage = this.damageMin * pow(2, this.duration);
+                var d = random(this.damageMin, this.damageMax);
+                var damage = d * sq(this.duration);
+                e.dealDamage(damage, this.type);
+                this.onHit(e);
+            }
         }
     ]
 };
