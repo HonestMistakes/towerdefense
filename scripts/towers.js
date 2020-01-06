@@ -617,8 +617,9 @@ tower.archer = {
     name: 'archer',
     title: 'Archer Tower',
     // Stats
-    cooldownMax: 250,
-    cooldownMin: 249,
+    cooldownMax: 100,
+    cooldownMin: 99,
+    damageMax: 3,
     cost: 10,
     range: 8,
     // Upgrades
@@ -630,9 +631,9 @@ tower.archer = {
             name: 'archerFast',
             title: 'Fast Aiming',
             // Stats
-            cooldownMax: 5,
-            cooldownMin: 0,
-            cost: 75,
+            cooldownMax: 45,
+            cooldownMin: 44,
+            cost: 25,
             damageMax: 10,
             damageMin: 8,
         }
