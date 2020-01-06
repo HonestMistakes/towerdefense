@@ -619,9 +619,9 @@ tower.archer = {
     title: 'Archer',
     // Stats
     cooldownMax: 125,
-    cost: 10,
-    damageMin: 4,
-    damageMax: 8,
+    cost: 50,
+    damageMin: 25,
+    damageMax: 25,
     range: 5,
     type: 'dart',
     // Upgrades
@@ -636,13 +636,13 @@ tower.archer = {
             width: 0.35,
             // Misc
             name: 'fasterAiming',
-            title: 'Faster Aiming',
+            title: 'Better Bow',
             // Stats
             cooldownMax: 75,
             cost: 20,
-            damageMax: 18,
-            damageMin: 12,
-            range: 8,
+            damageMax: 35,
+            damageMin: 35,
+            range: 10,
             // Methods
             attack: function(e) {
                 if (this.lastTarget === e) {
